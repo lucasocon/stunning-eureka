@@ -10,7 +10,30 @@
 			  crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            $("#lead-form-native-3").submit(function(event){
+		
+		
+		
+		
+          $.ajax({
+            url :
+            'https://enrollment-engine-stag-pr-1545.herokuapp.com/native_forms/custom_forms/3/custom_form_entries/entry_data',
+            type: 'GET',
+            dataType: "json",
+            xhrFields: {
+            withCredentials: true
+            },
+            crossDomain: true,
+            success: function(data) {
+            console.log(data)
+            },
+            error: function(data) {
+            console.log(data)
+            }
+            });
+            return false;
+          });
+
+          $("#lead-form-native-3").submit(function(event){
                 event.preventDefault()
                 var post_url = $(this).attr("action");
                 var request_method = $(this).attr("method");
