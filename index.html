@@ -10,7 +10,6 @@
 			  crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-          $("#lead-form-native-3").submit(function(event){
           $(".native_form_3").submit(function(event){
                 event.preventDefault()
                 var post_url = $(this).attr("action");
@@ -37,7 +36,7 @@
 		
     	$.ajax({
             url :
-            'https://enrollment-engine-stag-pr-1545.herokuapp.com/native_forms/custom_forms/3/custom_form_entries/entry_data',
+            'https://enrollment-engine-stag-pr-1679.herokuapp.com/native_forms/custom_forms/3/custom_form_entries/entry_data',
             type: 'GET',
             dataType: "json",
             xhrFields: {
